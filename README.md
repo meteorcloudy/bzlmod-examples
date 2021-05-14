@@ -16,3 +16,12 @@ cd projects && python3 ./server.py
 ```
 cd examples/01-simple && bazel run :main
 ```
+
+## Dependency graph of projects in the main registry
+
+```
+C 1.0 -> B 1.0 -> A 1.0
+         B 1.1 -> A 1.1
+                  A 1.1-1
+C 1.1 -> B 1.2
+```
