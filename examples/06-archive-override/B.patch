@@ -1,0 +1,11 @@
+--- a/b.cc	2021-05-11 14:41:26.000000000 +0200
++++ b/b.cc	2021-05-11 18:06:56.000000000 +0200
+@@ -2,7 +2,7 @@
+ #include "a.h"
+ #include "b.h"
+
+-#define LIB_NAME "B1.1"
++#define LIB_NAME "B1.1 (locally patched)"
+
+ void hello_b(std::string caller) {
+     hello_a(LIB_NAME);

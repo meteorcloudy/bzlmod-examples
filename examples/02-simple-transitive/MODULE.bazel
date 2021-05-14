@@ -1,0 +1,13 @@
+module(
+  name = "main",
+  version = "1.0",
+  compatibility_level = 1,
+)
+
+# B 1.0 depends on A 1.0,
+# A 1.0 should be pulled automatically
+bazel_dep(
+  name = "B",
+  version = "1.0",
+)
+

@@ -1,0 +1,10 @@
+module(
+  name = "B",
+  version = "1.0",
+  compatibility_level = 1,
+)
+
+bazel_dep(
+  name = "A",
+  version = "1.0",
+)

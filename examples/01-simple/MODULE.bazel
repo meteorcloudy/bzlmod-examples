@@ -1,0 +1,13 @@
+module(
+  name = "main",
+  version = "1.0",
+  compatibility_level = 1,
+)
+
+# A1.1-1 is a patched version of A1.1,
+# the patch file is stored in the registry
+bazel_dep(
+  name = "A",
+  version = "1.1-1",
+)
+

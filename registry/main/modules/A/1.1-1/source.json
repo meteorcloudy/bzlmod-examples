@@ -1,0 +1,8 @@
+{
+    "integrity": "sha256-EWT6x1JDC91lxiuTnv2fkdCxLuZhSyK7qE2FH9PJnGw=",
+    "patch_strip": 0,
+    "patches": {
+        "A.patch": "sha256-TcN+frKxJkRBtusHY/p3KFIUdrq/7qlSILQ5Zxp4viE="
+    },
+    "url": "http://localhost:51213/A1.1.tar.gz"
+}

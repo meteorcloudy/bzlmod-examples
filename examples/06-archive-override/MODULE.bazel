@@ -1,0 +1,24 @@
+module(
+  name = "main",
+  version = "1.0",
+  compatibility_level = 1,
+)
+
+# C 1.0 depends on B 1.0
+# B 1.0 dpeneds on A 1.0
+bazel_dep(
+  name = "C",
+  version = "1.0",
+)
+
+# B should be overridden to the archive source version 1.1.
+# A should be upgraded A 1.1 accordingly.
+override_dep(
+  name = "B",
+  override = archive_override(
+    urls = ["http://localhost:51213/B1.1.tar.gz"],
+    integrity = "sha256-zyeBn+s3YRUpFz1NjJ3WcZI9moLg7ImxZIkAksUNPJo=",
+    patches = ["//:B.patch"],
+    patch_strip = 1,
+  ),
+)

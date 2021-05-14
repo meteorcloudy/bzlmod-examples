@@ -1,0 +1,18 @@
+module(
+  name = "main",
+  version = "1.0",
+  compatibility_level = 1,
+)
+
+# A should be upgraded to 1.1 due to B 1.1
+bazel_dep(
+  name = "A",
+  version = "1.0",
+)
+
+# B 1.1 depends on A 1.1
+bazel_dep(
+  name = "B",
+  version = "1.1",
+)
+

@@ -1,0 +1,10 @@
+platforms:
+  linux:
+    build_targets:
+    - '...'
+  macos:
+    build_targets:
+    - '...'
+  windows:
+    build_targets:
+    - '...'
