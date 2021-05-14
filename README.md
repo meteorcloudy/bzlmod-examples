@@ -3,7 +3,7 @@ Example usages of Bzlmod feature in Bazel
 
 1. Build a Bazel binary that supports Bzlmod:
 ```
-git fetch https://github.com/Wyverald/bazel.git bzlmod
+git fetch https://github.com/Wyverald/bazel.git bzlmod && git checkout bzlmod
 bazel build //src:bazel
 ```
 
