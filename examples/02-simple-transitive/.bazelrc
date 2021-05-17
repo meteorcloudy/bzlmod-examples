@@ -1,1 +1,1 @@
-build --registries=../../registry/main
+build --registries=file://%workspace%/../../registry/main

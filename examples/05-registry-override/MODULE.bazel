@@ -16,6 +16,6 @@ override_dep(
   override = single_version_override(
     # version override also works together with registry override
     # version = "1.0",
-    registry = "../../registry/another",
+    registry = "file://%workspace%/../../registry/another",
   ),
 )
