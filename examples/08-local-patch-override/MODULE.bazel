@@ -1,0 +1,19 @@
+module(
+  name = "main",
+  version = "1.0",
+  compatibility_level = 1,
+)
+
+# B 1.0 depends on A 1.0
+bazel_dep(
+  name = "B",
+  version = "1.0",
+)
+
+# A should be override to the local version (A 1.1).
+override_dep(
+  name = "A",
+  override = local_path_override(
+    path = "../../projects/A/1.1"
+  ),
+)
