@@ -4,4 +4,4 @@ module(
     compatibility_level = "1",
 )
 
-bazel_dep(name = "B", version = "1.2")
+bazel_dep(name = "B", version = "1.2", repo_name = "com_foo_bar_b")

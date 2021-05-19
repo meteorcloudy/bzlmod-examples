@@ -1,0 +1,26 @@
+module(
+  name = "main",
+  version = "1.0",
+  compatibility_level = 1,
+)
+
+# The main module can reference module A as com_foo_bar_a in BUILD and bzl file.
+bazel_dep(
+  name = "A",
+  version = "1.0",
+  repo_name = "com_foo_bar_a",
+)
+
+# C depends on B and references it as "com_foo_bar_b"
+bazel_dep(
+  name = "C",
+  version = "1.1",
+)
+
+# B depends on A and references it as "A"
+override_dep(
+  name = "B",
+  override = single_version_override(
+    version = "1.0",
+  ),
+)

@@ -6,6 +6,6 @@ cc_library(
   hdrs = ["c.h"],
   deps = [
     # "@A//:lib_a",
-    "@B//:lib_b",
+    "@com_foo_bar_b//:lib_b",
   ],
 )
