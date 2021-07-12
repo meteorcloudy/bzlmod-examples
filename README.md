@@ -1,9 +1,9 @@
 # bzlmod-examples
 Example usages of Bzlmod feature in Bazel
 
-1. Build a Bazel binary that supports Bzlmod:
+1. Build a Bazel binary from HEAD, which supports Bzlmod:
 ```
-git fetch https://github.com/Wyverald/bazel.git bzlmod && git checkout bzlmod
+git fetch https://github.com/bazelbuild/bazel.git bzlmod && git checkout bzlmod
 bazel build //src:bazel
 ```
 
@@ -14,7 +14,7 @@ cd projects && python3 ./server.py
 
 2. Change into an exmaple directory, build and run the binary:
 ```
-cd examples/01-simple && bazel run :main
+cd examples/01-simple && bazel run :main --experimental_enable_bzlmod
 ```
 
 ## Dependency graph of modules in the main registry
