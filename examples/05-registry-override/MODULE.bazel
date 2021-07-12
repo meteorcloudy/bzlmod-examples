@@ -11,11 +11,10 @@ bazel_dep(
 )
 
 # A should be fetched from the specified registry
-override_dep(
-  name = "A",
-  override = single_version_override(
-    # version override also works together with registry override
-    # version = "1.0",
-    registry = "file://%workspace%/../../registry/another",
-  ),
+single_version_override(
+  module_name = "A",
+
+  # version override also works together with registry override
+  # version = "1.0",
+  registry = "file://%workspace%/../../registry/another",
 )

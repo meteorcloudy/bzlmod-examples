@@ -11,12 +11,10 @@ bazel_dep(
 )
 
 # A should be override to the git commit version (A 1.1).
-override_dep(
-  name = "A",
-  override = git_override(
-    remote = "https://github.com/meteorcloudy/A.git",
-    commit = "6a2c2e22849b3e6b33d5ea9aa72222d4803a986a",
-    patches = ["//:A.patch"],
-    patch_strip = 1,
-  ),
+git_override(
+  module_name = "A",
+  remote = "https://github.com/meteorcloudy/A.git",
+  commit = "6a2c2e22849b3e6b33d5ea9aa72222d4803a986a",
+  patches = ["//:A.patch"],
+  patch_strip = 1,
 )

@@ -13,12 +13,10 @@ bazel_dep(
 
 # B should be overridden to the archive source version 1.1.
 # A should be upgraded A 1.1 accordingly.
-override_dep(
-  name = "B",
-  override = archive_override(
-    urls = ["http://localhost:51213/B1.1.tar.gz"],
-    integrity = "sha256-zyeBn+s3YRUpFz1NjJ3WcZI9moLg7ImxZIkAksUNPJo=",
-    patches = ["//:B.patch"],
-    patch_strip = 1,
-  ),
+archive_override(
+  module_name = "B",
+  urls = ["http://localhost:51213/B1.1.tar.gz"],
+  integrity = "sha256-zyeBn+s3YRUpFz1NjJ3WcZI9moLg7ImxZIkAksUNPJo=",
+  patches = ["//:B.patch"],
+  patch_strip = 1,
 )

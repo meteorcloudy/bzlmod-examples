@@ -1,6 +1,6 @@
 module(
     name = "B",
     version = "1.2",
-    compatibility_level = "1",
+    compatibility_level = 1,
 )
 
