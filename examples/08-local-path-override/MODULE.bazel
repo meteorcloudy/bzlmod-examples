@@ -10,6 +10,11 @@ bazel_dep(
   version = "1.0",
 )
 
+bazel_dep(
+  name = "A",
+  version = "1.0",
+)
+
 # A should be override to the local version (A 1.1).
 local_path_override(
   module_name = "A",

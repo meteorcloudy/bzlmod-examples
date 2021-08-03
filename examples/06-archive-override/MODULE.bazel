@@ -11,6 +11,11 @@ bazel_dep(
   version = "1.0",
 )
 
+bazel_dep(
+  name = "B",
+  version = "1.0",
+)
+
 # B should be overridden to the archive source version 1.1.
 # A should be upgraded A 1.1 accordingly.
 archive_override(

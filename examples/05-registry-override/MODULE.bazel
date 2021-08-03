@@ -10,6 +10,11 @@ bazel_dep(
   version = "1.1",
 )
 
+bazel_dep(
+  name = "A",
+  version = "1.1",
+)
+
 # A should be fetched from the specified registry
 single_version_override(
   module_name = "A",
